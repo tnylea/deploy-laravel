@@ -18,6 +18,13 @@ set('bin/composer', '/Users/anthonylea/Library/Application\ Support/Herd/bin/com
 // Hosts
 localhost()
     ->set('deploy_path', '~/Server');
+
+
+// Custom Artisan Task for Optimize
+task('artisan:optimize', function () {
+    run('{{bin/php}} {{release_path}}/artisan optimize');
+})->desc('Optimize Laravel Application');
+
 // host('deploy-laravel.test')
 //     ->set('remote_user', 'deployer')
 //     ->set('deploy_path', '~/Sites/deploy-laravel');
