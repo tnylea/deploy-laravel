@@ -32,3 +32,4 @@ task('artisan:optimize', function () {
 // Hooks
 
 after('deploy:failed', 'deploy:unlock');
+after('deploy:symlink', 'artisan:optimize');
