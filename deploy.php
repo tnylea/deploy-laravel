@@ -11,11 +11,16 @@ add('shared_files', []);
 add('shared_dirs', []);
 add('writable_dirs', []);
 
-// Hosts
+set('bin/php', '/Users/anthonylea/Library/Application\ Support/Herd/bin/php');
+set('bin/composer', '/Users/anthonylea/Library/Application\ Support/Herd/bin/composer');
 
-host('deploy-laravel.test')
-    ->set('remote_user', 'deployer')
-    ->set('deploy_path', '~/Sites/deploy-laravel');
+
+// Hosts
+localhost()
+    ->set('deploy_path', '~/Server');
+// host('deploy-laravel.test')
+//     ->set('remote_user', 'deployer')
+//     ->set('deploy_path', '~/Sites/deploy-laravel');
 
 // Hooks
 
